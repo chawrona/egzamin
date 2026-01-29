@@ -2,41 +2,175 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <script src="https://kit.fontawesome.com/09700efd56.js" crossorigin="anonymous"></script>
-    <title>Egzamin Sieci Komputerowe</title>
+    <title>Fiszki - Sesja Poprawkowa</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+    <button class="darkmode">
+        <img src="./pobrane.png" alt="">
+    </button>
+
+<div class="card">
+    <div id="quiz-container">
+        <div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: space-between;">
+            <button class="danger" onclick="startFresh()">Reset</button>
+            <div id="progress-bar"></div>
+        </div>
+        
+        <div id="question">
+            <div class="type">C</div>
+            <div class="text"></div>
+        </div>
+        <textarea id="userAnswer" placeholder="Wpisz odpowiedź..."></textarea>
+
+       
+
+        <!-- <button class="btn-green wide" onclick="handleNext(true)">Dobrze</button> -->
+
+        <div class="center-buttons" id="main-actions">
+            <button class="btn-check" onclick="handleShowAnswer()">Pokaż odpowiedź</button>
     
-    <main>
-        <h1>Egzamin inżynierski</h1>
-        <h2>Przerobiłeś <span class="procent"></span> pytań!</h2>
-        <p>Ilość znanych pytań: <span class="ogar">0</span> / <span class="nieogar">200</span></p>
-        <div class="wrap">
-            <p class="pytanie"></p>
-            <div class="box">
-                <i class="fa-solid fa-music mute"></i>
-                <i class="fa-solid fa-forward forward none"></i>
-               <i class="fa-solid fa-play btn"></i>
-            </div>
         </div>
-        <div class="pasek">
-            <span class="XD">0%</span>
-            <div class="subpasek"></div>
+        
+       
+        <div class="eval-buttons" id="eval-actions">
+            <button class="btn-green" onclick="handleNext(true)">Dobrze</button>
+            <button class="btn-red" onclick="handleNext(false)">Źle</button>
         </div>
-        <div class="btns">
-            <button class="git mam">Dodaj do znanych</button>
-        </div>
-        <h3>Pytania, które znasz:</h3>
-        <ul></ul>
-    </main>
-    <audio controls hidden="hidden">
-        <source src="LOSU.mp3" type="audio/mp3">
-    </audio>
-    <script src="./python.js"></script>
-    <script src="./proceduralne.js"></script>
-    <script src="./java.js"></script>
-    <script src="./index.js"></script>
+         <div id="answer-box" class="answer"></div>
+    </div>
+</div>
+
+<script src="cards.js"></script>
+<script>
+const btn1 = document.querySelector(".darkmode")
+
+btn1.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode")
+})
+
+const MASTER_DATA = [...allCards,...allCards4, ...allCards2, ...allCards3];
+
+let state = {
+    currentCards: [],
+    remainingCards: [],
+    currentCard: null,
+    score: 0,
+    errors: [],
+    isFinished: false
+};
+
+function saveToStorage() {
+    localStorage.setItem("fiszki-state-v4", JSON.stringify(state));
+}
+
+function loadFromStorage() {
+    const saved = localStorage.getItem("fiszki-state-v4");
+    if (saved) {
+        state = JSON.parse(saved);
+        if (state.isFinished) showSummary();
+        else {
+            showScreen('quiz');
+            displayCard();
+        }
+    } else {
+        startFresh();
+    }
+}
+
+function startFresh() {
+    state.currentCards = [...MASTER_DATA];
+    state.remainingCards = [...MASTER_DATA];
+    resetState();
+}
+
+function retryIncomplete() {
+    const incomplete = [...state.errors, ...state.remainingCards];
+    
+    if (incomplete.length === 0) return alert("Wszystko zrobione idealnie!");
+    
+    state.currentCards = incomplete;
+    state.remainingCards = [...incomplete];
+    resetState();
+}
+
+function resetState() {
+    state.score = 0;
+    state.errors = [];
+    state.isFinished = false;
+    saveToStorage();
+    displayCard();
+}
+
+function displayCard() {
+    if (state.remainingCards.length === 0) {
+        finishEarly();
+        return;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * state.remainingCards.length);
+    state.currentCard = state.remainingCards[randomIndex];
+    
+    const answeredCount = state.currentCards.length - state.remainingCards.length;
+    document.getElementById("progress-bar").innerText = `Karta ${answeredCount + 1} / ${state.currentCards.length}`;
+
+   
+
+    document.getElementById("question").querySelector(".text").innerText = state.currentCard.q.split(":")[1].trim();;
+    document.getElementById("question").querySelector(".type").innerText = state.currentCard.q.match(/^[^:]+/)[0];;
+    document.getElementById("userAnswer").value = "";
+    document.getElementById("answer-box").style.display = "none";
+    document.getElementById("eval-actions").style.display = "none";
+    document.getElementById("main-actions").style.display = "flex";
+}
+
+function handleShowAnswer() {
+    document.getElementById("answer-box").innerText = state.currentCard.a;
+    document.getElementById("answer-box").style.display = "block";
+    document.getElementById("eval-actions").style.display = "flex";
+    document.getElementById("main-actions").style.display = "none";
+}
+
+function handleNext(isCorrect) {
+    
+    if (isCorrect) {
+        state.remainingCards = state.remainingCards.filter(card => card !== state.currentCard);
+        state.score++;
+    } else {
+        state.errors.push(state.currentCard);
+    }
+
+    saveToStorage();
+    displayCard();
+}
+
+function finishEarly() {
+    state.isFinished = true;
+    saveToStorage();
+    showSummary();
+}
+
+function showSummary() {
+    showScreen('summary');
+    const remainingCount = state.remainingCards.length;
+    const totalToRetry = state.errors.length + remainingCount;
+    
+    document.getElementById("final-stats").innerHTML = `
+        ✅ Poprawne: <strong>${state.score}</strong><br>
+        ❌ Błędne: <strong>${state.errors.length}</strong><br>
+        ⏳ Niezrobione: <strong>${remainingCount}</strong><br><br>
+        Do powtórki łącznie: <strong>${totalToRetry}</strong>
+    `;
+
+    document.getElementById("btn-resume-incomplete").style.display = totalToRetry > 0 ? "block" : "none";
+}
+
+function showScreen(type) {
+    document.getElementById("quiz-container").style.display = type === 'quiz' ? 'block' : 'none';
+}
+
+loadFromStorage();
+</script>
 </body>
 </html>

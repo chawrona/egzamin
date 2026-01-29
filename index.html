@@ -113,7 +113,7 @@ function displayCard() {
     state.currentCard = state.remainingCards[randomIndex];
     
     const answeredCount = state.currentCards.length - state.remainingCards.length;
-    document.getElementById("progress-bar").innerText = `Karta ${answeredCount + 1} / ${state.currentCards.length}`;
+    document.getElementById("progress-bar").innerText = `Już umiem: ${answeredCount + 1} / ${state.currentCards.length}`;
 
    
 

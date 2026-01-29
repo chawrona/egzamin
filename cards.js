@@ -177,6 +177,7 @@ const allCards = [
     { q: "Złożoność obliczeniowa: Czym różni się O(f(n)) od Θ(f(n))?", a: "O(f(n)) jest górnym ograniczeniem, Θ(f(n)) dokładnie opisuje rząd wzrostu (jest jednocześnie górnym i dolnym ograniczeniem)." },
     { q: "Złożoność obliczeniowa: Jaka jest złożoność sortowania bąbelkowego w notacji O?", a: "O(n^2)." },
 
+   
     // 2. WYSZUKIWANIE I SORTOWANIE
     { q: "Algorytmy: Na czym polega wyszukiwanie liniowe i jaka jest jego złożoność?", a: "Przeszukiwanie element po elemencie; złożoność O(n)." },
     { q: "Algorytmy: Jakie wymagania muszą spełnić dane dla wyszukiwania binarnego i jaka jest jego złożoność?", a: "Dane muszą być posortowane; złożoność O(log n)." },
@@ -233,6 +234,37 @@ const allCards = [
     { q: "Grafy: Co znajduje algorytm Floyda-Warshalla i jaka jest jego złożoność?", a: "Wszystkie najkrótsze ścieżki między każdą parą wierzchołków; złożoność O(n³)." },
     { q: "Grafy: Do czego służą algorytmy Kruskala i Prima?", a: "Do wyznaczania Minimalnego Drzewa Rozpinającego (MST)." },
     { q: "Grafy: Dla jakiego typu grafu stosuje się sortowanie topologiczne?", a: "Dla grafów skierowanych acyklicznych (DAG)." },
+
+
+    // 1. ZŁOŻONOŚĆ OBLICZENIOWA - PODSTAWY
+    { q: "Złożoność: Co opisuje notacja duże O (Big O)?", a: "Opisuje pesymistyczny (najgorszy) czas wykonania algorytmu lub jego zapotrzebowanie na pamięć w zależności od wielkości danych wejściowych." },
+    { q: "Złożoność: Uporządkuj podstawowe klasy złożoności od najszybszej do najwolniejszej.", a: "O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n)." },
+    { q: "Złożoność: Co oznacza złożoność O(1)?", a: "Czas wykonania jest stały i nie zależy od liczby danych (np. dostęp do elementu tablicy po indeksie)." },
+    { q: "Złożoność: Co oznacza złożoność O(n)?", a: "Czas wykonania rośnie liniowo wraz ze wzrostem liczby danych (np. przejście pętlą przez wszystkie elementy)." },
+    { q: "Złożoność: Czym różni się złożoność czasowa od pamięciowej?", a: "Czasowa dotyczy liczby operacji potrzebnych do wykonania algorytmu, a pamięciowa ilości pamięci RAM potrzebnej do jego działania." },
+
+    // 2. WYSZUKIWANIE I SORTOWANIE - OGÓLNE
+    { q: "Algorytmy: Wymień podstawowe algorytmy sortowania o złożoności O(n^2).", a: "Sortowanie bąbelkowe (Bubble Sort), przez wstawianie (Insertion Sort), przez wybieranie (Selection Sort)." },
+    { q: "Algorytmy: Wymień efektywne algorytmy sortowania o złożoności O(n log n).", a: "Merge Sort (scalanie), Quick Sort (szybkie), Heap Sort (kopcowe)." },
+    { q: "Algorytmy: Co to znaczy, że algorytm sortowania jest 'stabilny'?", a: "Zachowuje względną kolejność elementów o tych samych kluczach (wartościach)." },
+    { q: "Algorytmy: Czy QuickSort jest algorytmem stabilnym?", a: "Nie, standardowa implementacja QuickSort nie jest stabilna." },
+    { q: "Algorytmy: Co to jest algorytm 'dziel i zwyciężaj'?", a: "Metoda polegająca na dzieleniu problemu na mniejsze podproblemy, rozwiązywaniu ich, a następnie łączeniu wyników (np. Merge Sort)." },
+
+    // 3. STRUKTURY DANYCH - WSTĘP I PORÓWNANIA
+    { q: "Struktury danych: Jaka jest główna różnica między tablicą a listą powiązaną?", a: "Tablica ma stały rozmiar i ciągły obszar pamięci (szybki dostęp); lista jest dynamiczna, elementy są rozrzucone w pamięci (szybkie dodawanie/usuwanie)." },
+    { q: "Struktury danych: Kiedy warto użyć tablicy zamiast listy?", a: "Gdy znamy rozmiar danych i potrzebujemy szybkiego dostępu do elementów przez indeks (O(1))." },
+    { q: "Struktury danych: Kiedy warto użyć listy zamiast tablicy?", a: "Gdy często dodajemy/usuwamy elementy (zwłaszcza w środku) i nie znamy z góry ilości danych." },
+
+    // 6. DRZEWA - PODSTAWOWE POJĘCIA
+    { q: "Drzewa: Co to jest korzeń (root) drzewa?", a: "To najwyższy węzeł w drzewie, który nie ma rodzica." },
+    { q: "Drzewa: Co to jest liść (leaf) w drzewie?", a: "To węzeł, który nie posiada żadnych dzieci." },
+    { q: "Drzewa: Czym jest wysokość drzewa?", a: "To długość najdłuższej ścieżki od korzenia do liścia." },
+    { q: "Drzewa: Co oznacza, że drzewo jest zrównoważone?", a: "Że wysokości lewego i prawego poddrzewa każdego węzła różnią się nieznacznie (zazwyczaj o max 1), co zapewnia optymalny czas operacji." },
+
+    // 7. GRAFY - KLASYFIKACJA
+    { q: "Grafy: Czym różni się graf skierowany od nieskierowanego?", a: "W grafie skierowanym krawędzie mają zwrot (strzałki A->B); w nieskierowanym relacja jest dwustronna (A-B)." },
+    { q: "Grafy: Co to jest graf ważony?", a: "Graf, w którym krawędzie mają przypisane wartości liczbowe (wagi), np. odległość między miastami." },
+    { q: "Grafy: Co to jest cykl w grafie?", a: "Ścieżka, która zaczyna się i kończy w tym samym wierzchołku." },
 
     // 1. TYPY DANYCH I WARUNKI
     { q: "Java: Ile bitów zajmuje typ double i podaj przykład?", a: "64 bity; np. 3.14" },
@@ -424,6 +456,167 @@ const allCards = [
 
 const allCards2 = [
     // Podstawy i Narzędzia
+
+     {
+    "q": "Złożoność obliczeniowa: Co oznacza zapis O(g(n)) (duże O)?",
+    "a": "Oznacza asymptotyczną granicę górną. Funkcja f(n) nie rośnie szybciej niż funkcja g(n) (z dokładnością do stałej)."
+  },
+  {
+    "q": "Złożoność obliczeniowa: Co oznacza zapis Θ(g(n)) (Theta)?",
+    "a": "Oznacza dokładne asymptotyczne oszacowanie (granicę górną i dolną). Funkcja rośnie w tym samym tempie co g(n)."
+  },
+  {
+    "q": "Złożoność obliczeniowa: Jaka jest złożoność czasowa dostępu do k-tego elementu w tablicy, a jaka w liście jednokierunkowej?",
+    "a": "W tablicy: O(1) (czas stały). W liście: O(n) (trzeba przejść przez k elementów)."
+  },
+  {
+    "q": "Sortowanie: Co to znaczy, że algorytm sortowania jest 'stabilny'?",
+    "a": "To znaczy, że nie zmienia on wzajemnej kolejności elementów, które mają takie same klucze (wartości)."
+  },
+  {
+    "q": "Sortowanie: Jaka jest złożoność pesymistyczna prostych algorytmów sortowania (Bąbelkowe, Wstawianie, Wybieranie)?",
+    "a": "O(n²) (kwadratowa)."
+  },
+  {
+    "q": "Sortowanie: Na czym polega ogólna zasada sortowania przez wstawianie (Insertion Sort)?",
+    "a": "Dzielimy zbiór na część posortowaną i nieposortowaną, a następnie pobieramy kolejny element i wstawiamy go w odpowiednie miejsce w części już posortowanej."
+  },
+  {
+    "q": "Listy: Jaka jest główna zaleta listy powiązanej w porównaniu do tablicy przy operacji wstawiania elementu w środku struktury?",
+    "a": "W liście wstawienie wymaga tylko zmiany wskaźników (O(1) jeśli mamy wskaźnik na miejsce), w tablicy wymaga przesunięcia wszystkich kolejnych elementów (O(n))."
+  },
+  {
+    "q": "Listy: Czym różni się lista jednokierunkowa od dwukierunkowej?",
+    "a": "W liście jednokierunkowej węzeł ma wskaźnik tylko na następnik, a w dwukierunkowej na następnik i poprzednik."
+  },
+  {
+    "q": "Stosy i Kolejki: Jaka jest reguła dostępu do danych w stosie, a jaka w kolejce?",
+    "a": "Stos: LIFO (Last In, First Out). Kolejka: FIFO (First In, First Out)."
+  },
+  {
+    "q": "Stosy i Kolejki: Jaka jest złożoność czasowa operacji wstawiania (push/enqueue) i usuwania (pop/dequeue) w poprawnie zaimplementowanym stosie/kolejce?",
+    "a": "O(1) (czas stały)."
+  },
+  {
+    "q": "Stosy i Kolejki: Co to jest kolejka priorytetowa?",
+    "a": "To struktura, w której elementy są pobierane nie według kolejności wstawienia, ale według ich priorytetu (np. najpierw największe)."
+  },
+  {
+    "q": "Drzewa: Jaka jest definicja Drzewa Poszukiwań Binarnych (BST)?",
+    "a": "To drzewo binarne, gdzie dla każdego węzła wartości w lewym poddrzewie są mniejsze, a w prawym większe od wartości tego węzła."
+  },
+  {
+    "q": "Drzewa: Co to jest wysokość drzewa?",
+    "a": "To długość najdłuższej ścieżki od korzenia do liścia (lub maksymalny poziom węzła)."
+  },
+  {
+    "q": "Drzewa: Jaka jest pesymistyczna złożoność wyszukiwania w drzewie BST (gdy staje się listą)?",
+    "a": "O(n) (liniowa)."
+  },
+  {
+    "q": "Drzewa: Co to jest drzewo AVL?",
+    "a": "To zrównoważone drzewo BST, w którym różnica wysokości lewego i prawego poddrzewa dla każdego węzła wynosi co najwyżej 1."
+  },
+  {
+    "q": "Drzewa: Na czym polega przechodzenie po drzewie metodą Inorder (LVR)?",
+    "a": "Odwiedzamy kolejno: Lewe poddrzewo -> Węzeł (Korzeń) -> Prawe poddrzewo."
+  },
+  {
+    "q": "Drzewa: Jaki wynik daje przejście Inorder na drzewie BST?",
+    "a": "Wypisuje wszystkie elementy drzewa w kolejności posortowanej (rosnąco)."
+  },
+  {
+    "q": "Drzewa: Do czego służą rotacje w drzewach (np. AVL)?",
+    "a": "Służą do przywracania równowagi drzewa (zmniejszania jego wysokości) przy zachowaniu własności BST."
+  },
+  {
+    "q": "Algorytmy drzew: Jaki jest cel algorytmu DSW?",
+    "a": "Równoważenie drzewa BST (zamiana w drzewo idealnie zrównoważone) w czasie liniowym, bez użycia sortowania i dodatkowej pamięci."
+  },
+  {
+    "q": "Drzewa: Jaki jest problem przy usuwaniu z drzewa BST węzła, który ma dwoje dzieci?",
+    "a": "Nie można go po prostu usunąć; trzeba go zastąpić jego poprzednikiem (maksimum z lewego poddrzewa) lub następnikiem (minimum z prawego)."
+  },
+{
+    "q": "Struktury danych: Co to jest Kopiec Binarny (Heap)?",
+    "a": "To drzewo binarne zupełne, które spełnia warunek kopca: każdy węzeł jest większy lub równy (w kopcu MAX) od swoich dzieci."
+  },
+  {
+    "q": "Struktury danych: Do implementacji jakiej abstrakcyjnej struktury danych najlepiej nadaje się kopiec?",
+    "a": "Do kolejki priorytetowej."
+  },
+  {
+    "q": "Złożoność: Jaka jest złożoność czasowa podstawowych operacji na kopcu (wstawianie, usuwanie szczytu)?",
+    "a": "O(log n) (zależna od wysokości drzewa)."
+  },
+  {
+    "q": "Grafy: Co oznacza, że graf jest 'ważony'?",
+    "a": "To graf, w którym każdej krawędzi przypisana jest pewna liczba (waga), oznaczająca np. koszt, odległość czy czas."
+  },
+  {
+    "q": "Grafy: Ile krawędzi posiada graf pełny o N wierzchołkach?",
+    "a": "N(N-1)/2 (każdy z każdym)."
+  },
+  {
+    "q": "Grafy: Wymień dwie podstawowe metody reprezentacji grafu w pamięci komputera.",
+    "a": "Macierz sąsiedztwa oraz Lista sąsiedztwa."
+  },
+  {
+    "q": "Grafy: Która reprezentacja jest bardziej oszczędna pamięciowo dla grafów rzadkich (mało krawędzi)?",
+    "a": "Lista sąsiedztwa (zależy od liczby krawędzi, a nie kwadratu liczby wierzchołków)."
+  },
+  {
+    "q": "Algorytmy grafowe: Co to jest Minimalne Drzewo Rozpinające (MST)?",
+    "a": "To podzbiór krawędzi grafu, który łączy wszystkie wierzchołki, nie tworzy cykli i ma minimalną możliwą sumę wag."
+  },
+  {
+    "q": "Algorytmy grafowe: Na czym polega ogólna zasada Algorytmu Kruskala (wyznaczanie MST)?",
+    "a": "Jest to algorytm zachłanny: wybieramy zawsze krawędź o najmniejszej wadze, która nie zamyka cyklu z już wybranymi krawędziami."
+  },
+  {
+    "q": "Algorytmy grafowe: Do czego służy algorytm A* (A-star)?",
+    "a": "Do znajdowania najkrótszej ścieżki w grafie z wykorzystaniem dodatkowej wiedzy (heurystyki)."
+  },
+  {
+    "q": "Algorytmy grafowe: Co oznacza składnik h(x) we wzorze funkcji oceny f(x) = g(x) + h(x) w algorytmie A*?",
+    "a": "Jest to heurystyka – szacowany (przewidywany) koszt dojścia od danego węzła do celu."
+  },
+  {
+    "q": "Grafy: Kiedy graf nazywamy Eulerowskim?",
+    "a": "Gdy posiada cykl Eulera, czyli ścieżkę zamkniętą przechodzącą przez każdą krawędź w grafie dokładnie jeden raz."
+  },
+  {
+    "q": "Grafy: Jaki jest warunek konieczny, aby graf spójny posiadał cykl Eulera?",
+    "a": "Wszystkie wierzchołki tego grafu muszą mieć stopień parzysty."
+  },
+  {
+    "q": "Algorytmy grafowe: Co to jest 'most' w grafie (istotne np. w algorytmie Fleury'ego)?",
+    "a": "To krawędź, której usunięcie spowodowałoby rozspójnienie grafu (zwiększenie liczby spójnych składowych)."
+  },
+  {
+    "q": "Wyszukiwanie: Na czym polega Haszowanie (Mieszanie)?",
+    "a": "Na przekształceniu klucza (np. napisu) za pomocą funkcji haszującej w indeks tablicy, pod którym zapisane zostaną dane."
+  },
+  {
+    "q": "Wyszukiwanie: Jaka jest idealna/oczekiwana złożoność wyszukiwania w tablicy haszującej?",
+    "a": "O(1) (czas stały)."
+  },
+  {
+    "q": "Wyszukiwanie: Co to jest kolizja w tablicy haszującej?",
+    "a": "Sytuacja, gdy funkcja haszująca zwraca ten sam indeks dla dwóch różnych kluczy."
+  },
+  {
+    "q": "Wyszukiwanie: Wymień jedną metodę rozwiązywania kolizji.",
+    "a": "Metoda łańcuchowa (listy podpinane pod indeks) lub adresowanie otwarte (szukanie wolnego miejsca w tablicy)."
+  },
+  {
+    "q": "Wyszukiwanie: Jaka jest złożoność pesymistyczna wyszukiwania w tablicy haszującej (gdy wszystko trafi do jednego 'kubełka')?",
+    "a": "O(n) (jak w liście)."
+  },
+  {
+    "q": "Sortowanie/Struktury: Co to jest Sortowanie przez Kopcowanie (Heapsort)?",
+    "a": "To algorytm sortowania o złożoności O(n log n), który wykorzystuje strukturę kopca do szybkiego pobierania elementu maksymalnego."
+  },
     { q: "Java: Czym jest jshell?", a: "To interaktywna powłoka (REPL) do szybkiego testowania fragmentów kodu Javy." },
     { q: "Java: Jaka jest różnica między java a javac?", a: "javac kompiluje kod do bajtkodu (.class), a java (JVM) go uruchamia." },
     { q: "Java: Jaką komendą tworzymy nowy obiekt Scanner do odczytu z konsoli?", a: "new Scanner(System.in)" },

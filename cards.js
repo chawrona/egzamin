@@ -967,7 +967,7 @@ const allCards = [
     { q: "Podstawy programowania C++: Wymień trzy słowa kluczowe służące do obsługi wyjątków.", a: "try, throw, catch." },
     { q: "Podstawy programowania C++: Co to jest STL?", a: "Standard Template Library – biblioteka gotowych struktur danych (kontenerów) i algorytmów." },
     { q: "Podstawy programowania C++: Charakterystyka kontenera 'vector'.", a: "Dynamiczna tablica z możliwością automatycznej zmiany rozmiaru." },
-    { q: "Podstawy programowania C++: Charakterystyka kontenerów 'list' i 'map'.", a: "list: lista dwukierunkowa; map: zbiór par klucz-wartość (słownik)." },
+    { q: "Podstawy programowania C++: Charakterystyka kontenerów 'list' i 'map'.", a: "list: lista dwukierunkowa; map : zbiór par klucz-wartość (słownik)." },
     { q: "Podstawy programowania C++: Do czego służą 'set', 'stack' oraz 'queue'?", a: "set: zbiór unikalnych elementów; stack: stos (LIFO); queue: kolejka (FIFO)." },
     { q: "Podstawy programowania C++: Jak posortować vector 'v' przy użyciu STL?", a: "sort(v.begin(), v.end());" },
 
@@ -1623,219 +1623,219 @@ const allCards4 = [
     { q: "Podstawy programowania C: Co dzieje się ze zmienną static po opuszczeniu bloku?", a: "Zmienna nie jest niszczona, pozostaje w pamięci." },
   {
     q: "Programowanie obiektowe: Przyjaźń w języku C++",
-    p: "jest nieprzechodnia i niedziedziczna"
+    a: "jest nieprzechodnia i niedziedziczna"
   },
   {
     q: "Systemy Czasu Rzeczywistego: Priorytety w systemach czasu rzeczywistego oraz w systemach operacyjnych czasu rzeczywistego są reprezentowane przez liczby całkowite. Ile różnych wartości priorytetu zapewnia implementacja systemu Linux w przypadku domyślnego algorytmu szeregowania procesów (klasa SCHED_OTHER) dla użytkownika root? Chodzi tu o parametr NICENESS.",
-    p: "4."
+    a: "4."
   },
   {
     q: "OiAK: W przypadku więcej niż czterech zmiennych alternatywnym podejściem jest technika tabelaryczna zwana metodą?",
-    p: "Quine-McCluskey'a"
+    a: "Quine-McCluskey'a"
   },
   {
     q: "Algorytmy i Struktury Danych: Nazwa B-drzewa pochodzi od:",
-    p: "nazwiska Bayer"
+    a: "nazwiska Bayer"
   },
   {
     q: "Programowanie obiektowe: Które słowo kluczowe w języku C++ używane jest do dziedziczenia klasy?",
-    p: "żadne, po dwukropku dziedziczymy"
+    a: "żadne, po dwukropku dziedziczymy"
   },
   {
     q: "OiAK: Jeden przyrost lub impuls zegara nazywany jest?",
-    p: "cyklem zegara"
+    a: "cyklem zegara"
   },
   {
     q: "Programowanie obiektowe: Właściwa kolejność wyłapywania wyjątków w klauzuli try { ... } catch { ... } w języku C++ to:",
-    p: "najpierw wyjątki klas pochodnych, potem klas bazowych (od dołu do góry drzewa hierarchii dziedziczenia)"
+    a: "najpierw wyjątki klas pochodnych, potem klas bazowych (od dołu do góry drzewa hierarchii dziedziczenia)"
   },
   {
     q: "Programowanie proceduralne: Wskaźnik p został zadeklarowany następująco int *p; Które z wyrażeń p *p ++p są L-wartościami?",
-    p: "L-wartościami są wyrażenia p oraz *p."
+    a: "L-wartościami są wyrażenia p oraz *p."
   },
   {
     q: "Programowanie proceduralne: Czy któraś ze zmiennych w podanym programie jest zmienną dynamiczną? Jeśli tak, to proszę ją wskazać. #include int main(void) { int $x=6$; int $*y=&x$ static int $z=8$; } printf(\"%d %d %d\\n\", x, y, z);",
-    p: ""
+    a: ""
   },
   {
     q: "Programowanie obiektowe: Konstruktor w języku C++:",
-    p: "definiuje obiekt i nadaje mu wartości w jednej instrukcji"
+    a: "definiuje obiekt i nadaje mu wartości w jednej instrukcji"
   },
   {
     q: "Przetwarzanie dokumentów XML i zaawansowane techniki WWW: pojedynczy ukośnik ( ) reprezentuje bezwzględną ścieżkę, rozpoczyna od korzenia dokumentu, podczas gdy podwójny ukośnik (//) reprezentuje względną ścieżkę, która zaczyna się od dowolnego miejsca w dokumencie XML",
-    p: ""
+    a: ""
   },
   {
     q: "Kryptografia: Które zdanie najlepiej opisuje różnicę między steganografią a kryptografią?",
-    p: "Steganografia ukrywa istnienie komunikatu, kryptografia ukrywa jego treść."
+    a: "Steganografia ukrywa istnienie komunikatu, kryptografia ukrywa jego treść."
   },
   {
     q: "Wzorce projektowe: Intencja (przeznaczenie) wzorca Fasada (Facade) to:",
-    p: "Udostępnienie jednolitego interfejsu dla zbioru interfejsów z podsystemu."
+    a: "Udostępnienie jednolitego interfejsu dla zbioru interfejsów z podsystemu."
   },
   {
     q: "Wzorce projektowe: Intencja (przeznaczenie) wzorca Pula Obiektów (Object Pool) to:",
-    p: "Optymalizacja wydajności poprzez ponowne użycie istniejących obiektów, zamiast tworzenia nowych"
+    a: "Optymalizacja wydajności poprzez ponowne użycie istniejących obiektów, zamiast tworzenia nowych"
   },
   {
     q: "Programowanie proceduralne: Wskaż poprawne instrukcje dynamicznego przydziału i zwalniania pamięci dla dwuwymiarowej tablicy ARR2D składającej się z M jednowymiarowych tablic, każda o rozmiarze N i typie elementów double.",
-    p: "double (*ARR2D) [N]=(double (*) [N]) malloc(M*N*sizeof(double)); free (ARR2D);"
+    a: "double (*ARR2D) [N]=(double (*) [N]) malloc(M*N*sizeof(double)); free (ARR2D);"
   },
   {
     q: "Algorytmy i struktury danych: W dowolnej sieci, maksymalny przepływ jest równy:",
-    p: "minimalnej przepustowości dowolnego przekroju"
+    a: "minimalnej przepustowości dowolnego przekroju"
   },
   {
     q: "Algorytmy i struktury danych: Graf jest grafem eulerowskim:",
-    p: "jeśli każdy wierzchołek tego grafu jest incydentny do parzystej ilości krawędzi"
+    a: "jeśli każdy wierzchołek tego grafu jest incydentny do parzystej ilości krawędzi"
   },
   {
     q: "Organizacja i architektura komputerów: Która reguła stwierdza, że wzrost wydajności jest mniej więcej proporcjonalny do pierwiastka kwadratowego ze wzrostu złożoności",
-    p: "reguła Pollacka"
+    a: "reguła Pollacka"
   },
   {
     q: "Wzorce projektowe: Intencja (przeznaczenie) wzorca Pyłek (Flyweight) to:",
-    p: "Użycie współdzielenia do efektywnej obsługi dużej liczby małych obiektów."
+    a: "Użycie współdzielenia do efektywnej obsługi dużej liczby małych obiektów."
   },
   {
     q: "Intencja (przeznaczenie) wzorca Budowniczy (Builder) to:",
-    p: "Oddzielenie konstrukcji obiektu o złożonej strukturze od jego reprezentacji tak, że ten sam proces konstrukcji może prowadzić do powstawania różnych reprezentacji."
+    a: "Oddzielenie konstrukcji obiektu o złożonej strukturze od jego reprezentacji tak, że ten sam proces konstrukcji może prowadzić do powstawania różnych reprezentacji."
   },
   {
     q: "Programowanie obiektowe: Wskaż prawidłową deklarację metody czysto wirtualnej w języku C++:",
-    p: "virtual void fun()= 0; Virtualne to abstrakcyjne w cpp"
+    a: "virtual void fun()= 0; Virtualne to abstrakcyjne w cpp"
   },
   {
     q: "Wzorce projektowe: Do kategorii wzorców strukturalnych należą (wskaź odpowiedź zawierającą wzorce tylko i wyłącznie z tej kategorii):",
-    p: "Adapter (Adapter), Most (Bridge), Kompozyt (Composit), Dekorator (Decorator), Fasada (Facade), Pyłek (Flyweight), Pełnomocnik (Proxy)."
+    a: "Adapter (Adapter), Most (Bridge), Kompozyt (Composit), Dekorator (Decorator), Fasada (Facade), Pyłek (Flyweight), Pełnomocnik (Proxy)."
   },
   {
     q: "Wzorce projektowe: Do kategorii wzorców konstrukcyjnych należą (wskaź odpowiedź zawierającą wzorce tylko i wyłącznie z tej kategorii):",
-    p: "Metoda Wytwórcza (Factory Method), Fabryka Abstrakcyjna (Abstract Factory), Budowniczy (Builder), Prototyp (Prototype), Singleton (Singleton)."
+    a: "Metoda Wytwórcza (Factory Method), Fabryka Abstrakcyjna (Abstract Factory), Budowniczy (Builder), Prototyp (Prototype), Singleton (Singleton)."
   },
   {
     q: "Organizacja i architektura komputerów: W którym typie pamięci, wartości binarne są przechowywane przy użyciu tradycyjnych form konfiguracji bramki logicznej typu flip-flop.",
-    p: "SRAM"
+    a: "SRAM"
   },
   {
     q: "Wzorce projektowe: Intencja (przeznaczenie) wzorca Kompozyt (Composite) to:",
-    p: "Kompozycja obiektów w struktury drzewiaste odzwierciedlające hierarchię całość-część. Wzorzec pozwala klientom na traktowanie w taki sam sposób indywidualnych obiektów i ich złożeń."
+    a: "Kompozycja obiektów w struktury drzewiaste odzwierciedlające hierarchię całość-część. Wzorzec pozwala klientom na traktowanie w taki sam sposób indywidualnych obiektów i ich złożeń."
   },
   {
     q: "Java: Jakiego operatora używamy do porównywania dwóch obiektów pod kątem równości, a nie referencji?",
-    p: ".equals()"
+    a: ".equals()"
   },
   {
     q: "Algorytmy i struktury danych: Drzewo binarne jest zrównoważone, jeśli:",
-    p: "różnica wysokości obu poddrzew dowolnego węzła jest równa 0 lub 1"
+    a: "różnica wysokości obu poddrzew dowolnego węzła jest równa 0 lub 1"
   },
   {
     q: "Organizacja i architektura komputerów: Liczniki mogą być projektowane jako?",
-    p: ""
+    a: ""
   },
   {
     q: "Algorytmy i struktury danych: Problem NP to problem decyzyjny:",
-    p: "dla którego rozwiązanie można zweryfikować w czasie wielomianowym"
+    a: "dla którego rozwiązanie można zweryfikować w czasie wielomianowym"
   },
   {
     q: "Algorytmy i struktury danych: Węzły wewnętrzne B+-drzewa to:",
-    p: "indeksy"
+    a: "indeksy"
   },
   {
     q: "Systemy czasu rzeczywistego: Metoda EDF (ang. Earliest Deadline First) wymaga zdefiniowania:",
-    p: "ostatecznego terminu wykonania oraz poziomu wywłaszczenia"
+    a: "ostatecznego terminu wykonania oraz poziomu wywłaszczenia"
   },
   {
     q: "Organizacja i architektura komputerów: Jak nazywamy tabele, która zawiera wartość następnego wyjścia, gdy znane są wejścia i obecne wyjście, czyli dokładnie informacje potrzebne do zaprojektowania licznika lub dowolnego obwodu?",
-    p: "wzbudzeń (excitation)"
+    a: "wzbudzeń (excitation)"
   },
   {
     q: "Systemy czasu rzeczywistego: Który z wymienionych algorytmów szeregowania zadań w systemach czasu rzeczywistego z dynamicznym przydziałem priorytetów jest optymalny?",
-    p: "EDF (ang. Earliest Deadline First)"
+    a: "EDF (ang. Earliest Deadline First)"
   },
   {
     q: "Algorytmy i struktury danych: Cyklem Hamiltona nazywamy cykl przechodzący przez:",
-    p: "wszystkie wierzchołki"
+    a: "wszystkie wierzchołki"
   },
   {
     q: "Organizacja i architektura komputerów: Magistrala łącząca główne komponenty komputera (procesor, pamięć, urządzenia We/Wy) nosi nazwę?",
-    p: "magistrala systemowa"
+    a: "magistrala systemowa"
   },
   {
     q: "Java: Klasa implementująca interfejs",
-    p: "Nie musi implementować wszystkich jego metod pod warunkiem, że jest abstrakcyjna. Można nie implementować tylko jeżeli te metody mają już definicje tj. mają słówko default przed typem zwracanym. Nie trzeba pisać abstract, w javie domyślnie metody w interfejsie są asbtarkcyjne"
+    a: "Nie musi implementować wszystkich jego metod pod warunkiem, że jest abstrakcyjna. Można nie implementować tylko jeżeli te metody mają już definicje tj. mają słówko default przed typem zwracanym. Nie trzeba pisać abstract, w javie domyślnie metody w interfejsie są asbtarkcyjne"
   },
   {
     q: "Organizacja i architektura komputerów: W którym elemencie przechowywana jest ostatnia pobrana instrukcja?",
-    p: ""
+    a: ""
   },
   {
     q: "Organizacja i architektura komputerów: Która architektura procesora wykorzystuje więcej i bardziej drobnoziarnistych etapów potoku?",
-    p: "superpipelinowa (ang. superpipeline)"
+    a: "superpipelinowa (ang. superpipeline)"
   },
   {
     q: "Systemy czasu rzeczywistego: Który planista zajmuje się szeregowaniem zadań w systemie czasu rzeczywistego?",
-    p: "krótkoterminowy"
+    a: "krótkoterminowy"
   },
   {
     q: "Przetwarzanie dokumentów XML i zaawansowane techniki WWW: Co oznacza skrót XML?",
-    p: "eXtensible Markup Language"
+    a: "eXtensible Markup Language"
   },
   {
     q: "Wzorce projektowe: Intencja (przeznaczenie) wzorca Stan (State) to:",
-    p: "Umożliwienie obiektowi zmiany zachowania w wyniku zmiany wewnętrznego stanu"
+    a: "Umożliwienie obiektowi zmiany zachowania w wyniku zmiany wewnętrznego stanu"
   },
   {
     q: "Przetwarzanie dokumentów XML i zaawansowane techniki WWW: Co to XPath?",
-    p: "XPath to język zapytań"
+    a: "XPath to język zapytań"
   },
   {
     q: "Organizacja i architektura komputerów: Które elementy są wejściem jednostki sterującej?",
-    p: "flagi ALU, zegar, IR"
+    a: "flagi ALU, zegar, IR"
   },
   {
     q: "Języki skryptowe: Czy w pythonie są destruktory?",
-    p: "Tak i wyglądają __del__()"
+    a: "Tak i wyglądają __del__()"
   },
   {
     q: "Programowanie obiektowe: Poniższy fragment programu w języku C++: MyClass object_1; MyClass object_2 = object_1; zawiera wywołania:",
-    p: "konstruktora domyślnego i konstruktora kopiującego"
+    a: "konstruktora domyślnego i konstruktora kopiującego"
   },
   {
     q: "Organizacja i architektura komputerów: Jaki element zapewnia pamięć wewnętrzną procesora?",
-    p: "rejestr"
+    a: "rejestr"
   },
   {
     q: "Organizacja i architektura komputerów: W przypadku pamięci o dostępie swobodnym jak nazywamy czas od momentu podania adresu do pamięci do momentu zapisania lub udostępnienia danych do użytku?",
-    p: "czas dostępu"
+    a: "czas dostępu"
   },
   {
     q: "Języki skryptowe: Jaki będzie wynik operacji {1, 2, 3} + {2, 3, 4} w języku Python?",
-    p: "wystąpi błąd, ponieważ Python nie obsługuje bezpośredniego dodawania zbiorów"
+    a: "wystąpi błąd, ponieważ Python nie obsługuje bezpośredniego dodawania zbiorów"
   },
   {
     q: "(Algorytmy i struktury danych: Algorytm sortowania szybkiego jaka złożoność?",
-    p: "Algorytm sortowania szybkiego (Quick sort) ma w każdym przypadku złożoność O(nlogn)."
+    a: "Algorytm sortowania szybkiego (Quick sort) ma w każdym przypadku złożoność O(nlogn)."
   },
   {
     q: "Języki skryptowe: Po ilu klasach może dziedziczyć klasa w języku Python?",
-    p: "po dowolnej liczbie klas"
+    a: "po dowolnej liczbie klas"
   },
   {
     q: "Wzorce projektowe: Do kategorii wzorców obiektowych należą (wskaź odpowiedź zawierającą wzorce tylko i wyłącznie z tej kategorii):",
-    p: "Fabryka Abstrakcyjna (Abstract Factory), Budowniczy (Builder), Dekorator (Decorator), Fasada (Facade), Mediator (Mediator)."
+    a: "Fabryka Abstrakcyjna (Abstract Factory), Budowniczy (Builder), Dekorator (Decorator), Fasada (Facade), Mediator (Mediator)."
   },
   {
     q: "Organizacja i architektura komputerów: Który element akceptuje i/lub przesyła informacje szeregowo?",
-    p: "rejestr przesuwny"
+    a: "rejestr przesuwny"
   },
   {
     q: "Algorytmy i struktury danych: Sterta maksymalna, to drzewo idealnie zrównoważone:",
-    p: "wartość każdego węzła jest nie mniejsza od wartości w każdym z jego dzieci"
+    a: "wartość każdego węzła jest nie mniejsza od wartości w każdym z jego dzieci"
   },
   {
     q: "Algorytmy i struktury danych: Podstawową procedurą w algorytmie DSW jest:",
-    p: "rotacja"
+    a: "rotacja"
   }
 ,
    
